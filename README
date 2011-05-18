@@ -1,0 +1,17 @@
+Show current git commit in sf web debug toolbar
+Charles Vallantin Dulac <charles.vallantin-dulac@sporteasy.fr>
+
+Setup :
+
+In your project's lib/debug/ directory (you'll need to create this directory),
+copy sfWebDebugPanelCurrentGitCommit.class.php file.
+
+In your project's web/img directory, copy git.png file
+
+Put this code in config/projectConfiguration to active module:
+
+//Git debug tool bar
+$this->dispatcher->connect('debug.web.load_panels', array(
+   'acWebDebugPanelCurrentGitCommit',
+   'listenToLoadDebugWebPanelEvent'
+));
