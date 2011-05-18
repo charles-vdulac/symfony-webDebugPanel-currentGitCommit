@@ -8,7 +8,7 @@ copy sfWebDebugPanelCurrentGitCommit.class.php file.
 
 In your project's web/img directory, copy git.png file
 
-Put this code in config/projectConfiguration to active module:
+In config/projectConfiguration.class.php, setup method, put this code to active module:
 
 //Git debug tool bar
 $this->dispatcher->connect('debug.web.load_panels', array(
